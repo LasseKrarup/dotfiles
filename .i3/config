@@ -56,10 +56,10 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
+bindsym $mod+apostrophe exec firefox
+bindsym $mod+Shift+f exec pcmanfm
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F exec gksu pcmanfm
+bindsym $mod+Ctrl+f exec gksu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
