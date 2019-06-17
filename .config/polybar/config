@@ -321,7 +321,7 @@ format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = %{F#DE1700}
+ramp-capacity-0 = %{F#DE1700} LOW
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
