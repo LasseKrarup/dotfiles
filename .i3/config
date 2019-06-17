@@ -177,9 +177,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # Open applications on specific workspaces
 assign [class="Firefox"] $ws1
 assign [class="Code - Insiders"] $ws2
-assign [class="Mail"] $ws3
 assign [class="Pcmanfm"] $ws4
-# assign [class="Skype"] $ws5
+assign [class="Spotify"] $ws5
+assign [class="Thunderbird"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
