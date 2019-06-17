@@ -60,7 +60,7 @@ font-5 = NotoSansMono:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = xbacklight xkeyboard cpu filesystem
+modules-right = xbacklight battery xkeyboard cpu filesystem
 
 tray-position = right
 tray-padding = 2
@@ -316,7 +316,7 @@ format-charging-underline = #ffb52a
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
