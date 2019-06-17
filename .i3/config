@@ -38,21 +38,11 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
-exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
-
-################################################################################################
-
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master,0 5+ unmute; "
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master,0 5- unmute"
-bindsym XF86AudioMute exec --no-startup-id "amixer -q sset Master,0 toggle"
+# Audio key bindings
+bindsym $mod+Ctrl+m exec --no-startup-id pavucontrol
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl -- set-sink-volume 0 +5%; pactl set-sink-mute 0 off"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl -- set-sink-volume 0 -5%; pactl set-sink-mute 0 off"
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
@@ -278,6 +268,8 @@ bindsym $mod+9 exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec_always --no-startup-id "pulseaudio --start --daemonize=false"
+exec --no-startup-id pa-applet --disable-key-grabbing
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
