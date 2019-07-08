@@ -184,6 +184,7 @@ assign [class="Code - Insiders"] $ws2
 assign [class="Pcmanfm"] $ws7
 for_window [class="Spotify"] move to workspace $ws8
 assign [class="Thunderbird"] $ws9
+assign [class="Laser Tag 3000"] $ws4
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
